@@ -1,0 +1,332 @@
+/* CSS1 was released in 1996 and CSS2 followed two years later.
+Work on CSS3 has been ongoing but the major browser have already 
+started to implement it. 
+*/
+
+/* 
+* {} UNIVERSAL SELECTOR
+
+Targets all elements on the page
+*/
+
+/* 
+h1, h2, h3 {} TYPE SELECTOR 
+
+Targets the <h1>, <h2> and <h3> elements
+*/
+
+/* 
+.hello {} CLASS SELECTOR 
+
+Targets any elements whose class attributes 
+has a value of hello 
+
+
+p.hello {}
+
+Targets only <p> elements whose class attributes
+has a value of hello 
+*/
+
+/* 
+#world {} ID SELECTOR
+
+Targets the elements whose id attributes has 
+a value of world 
+*/
+
+/* 
+li > a {} CHILD SELECTOR 
+
+Targets any <a> elements that are children of an <li>
+element (but not other <a> element in the page
+*/
+
+/* 
+p a {} DESCENDANT SELECTOR
+
+Targets any <a> elements that sit inside a <p> element,
+even if there are other elements nested between them.
+*/
+
+/* 
+h1 + p ADJACENT SIBLING SELECTOR
+
+Targets the first <p> element after any <h1> element
+(but not other <p> elements)
+*/
+
+/* h1 ~ p GENERAL SIBLING SELECTOR
+
+If you had two <p> elements that are siblings of an 
+<h1> element, this rule would apply to both
+*/
+
+@import url("960_12_col.css");
+
+h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+i {
+  color: red;
+}
+
+i {
+  color: blue;
+}
+
+b {
+  color: green;
+}
+
+b {
+  color: yellowgreen !important;
+}
+
+.intro {
+  font-size: x-large;
+}
+
+.select {
+  color: aquamarine !important;
+}
+
+.navbar {
+  font-size: 20px;
+}
+
+.links li {
+  display: inline-block;
+}
+
+li a:hover {
+  color: #ee3e80;
+}
+
+/* li > a {
+  color: red;
+} */
+
+.select {
+  color: black;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page h1 {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.page p {
+  color: #ffffff;
+  font-size: 25px;
+}
+
+/* h1.title {
+  color: black;
+} */
+
+.page {
+  border: 1px solid #665544;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  padding: inherit; /* Inherited padding from body */
+}
+
+.one,
+.two {
+  width: 100px;
+  height: 100px;
+  margin: 40px;
+  display: inline-block;
+  background: #ee3e80;
+}
+
+.p-one,
+.p-two {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  margin: 10px;
+}
+
+p.p-one {
+  background-color: rgb(0, 0, 0);
+  opacity: 0.5;
+}
+p.p-two {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#css {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1.title-me {
+  text-transform: uppercase;
+  text-decoration: underline;
+  word-spacing: 1em;
+  letter-spacing: 0.5em;
+  /*          L to R, T to B Blur, Color     */
+  text-shadow: 5px 5px 2px #ee3e80;
+}
+
+h1.title-me::first-letter {
+  font-size: 60px;
+  color: #3271fab6;
+}
+
+p.credit {
+  text-indent: 10em;
+  font-family: "Courier New", Courier, monospace;
+}
+
+p.credit::first-line {
+  font-weight: bolder;
+}
+
+p.intro {
+  line-height: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: oblique;
+  text-transform: capitalize;
+  text-indent: 1em;
+}
+
+a:link {
+  color: #0059ffad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000000;
+}
+
+a:active {
+  color: aquamarine;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+p[id] {
+  color: orange;
+}
+
+.box {
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+  width: 300px;
+  background-color: aqua;
+  margin-bottom: 20px;
+}
+
+.box-p {
+  padding: 20px;
+  text-align: justify;
+  height: 75%;
+  width: 75%;
+  background-color: rgb(216, 101, 101);
+}
+
+.content {
+  background-color: rgb(226, 153, 153);
+  min-width: 500px; /* min-width property specifies
+  the smallest size a box can be
+  displayed at when the browser
+  window is narrow, */
+  /* max-width property to
+ensure that lines of text do not
+appear too wide within a big
+browser window */
+  min-height: 10px;
+  max-height: 100px;
+  overflow: scroll;
+  padding: 10px;
+  border: #f78e8e 50px groove;
+  border-top-color: #2464eea4;
+  border-bottom-color: #2464eea4;
+  border-top-right-radius: 20px;
+}
+
+.firstimg {
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+  border: 10px #000000 solid;
+  border-radius: 80px 50px 0px 0px;
+}
+
+.secondimg {
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+  padding: 50px;
+  border-radius: 1em 4em 1em 4em / 2em 1em 2em 2em;
+  border: 5px solid #ee3e80;
+}
+
+.thirdimg {
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+  border: 5px solid #3e6dee;
+}
+
+/* boxes */
+
+div.boxes-sample {
+  font-size: 80%;
+  font-family: "Courier New", Courier, monospace;
+}
+
+div.boxes-page {
+  max-width: 940px;
+  min-width: 500px;
+  margin: 10px auto 10px auto;
+}
+
+ul#navigation {
+  width: 570px;
+  padding: 15px;
+  margin: 0px auto 0px auto;
+  border-top: 2px solid #000;
+  border-bottom: 1px solid #000;
+  text-align: center;
+}
+
+li.li {
+  display: inline-block;
+  margin: 0px 3px;
+}
+
+p.boxes-p {
+  text-align: center;
+  width: 600px;
+  margin: 20px auto 20px auto;
+  font-weight: normal;
+}
+
+a.links {
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+  pad: 6px 18px 5px 18px;
+}
+
+a:hover,
+a.on {
+  color: #cc3333;
+  background-color: #ffffff;
+}
